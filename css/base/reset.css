@@ -3,4 +3,19 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Space Mono", monospace;
+  font-weight: bold;
+}
+
+/* remove as setas padrão de aumentar/diminuir dos campos do tipo número */
+/* para navegadores Chrome, Edge, Opera e Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* para o Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }

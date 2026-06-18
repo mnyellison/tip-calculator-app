@@ -1,0 +1,59 @@
+.label-title {
+  font-size: var(--text-preset-5);
+  line-height: 24px;
+  margin-bottom: var(--spacing-100);
+  display: block;
+}
+
+.tip-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-200);
+}
+
+.tip-options-grid button {
+  background-color: var(--color-green-900);
+  color: var(--color-white);
+  font-size: var(--text-preset-3);
+  line-height: 36px;
+  border: none;
+  border-radius: 0.375rem;
+  padding: var(--spacing-100) var(--spacing-200);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tip-options-grid button:hover {
+  background-color: var(--color-green-400);
+  color: var(--color-green-900);
+}
+
+.tip-options-grid button:active {
+  background-color: var(--color-green-200);
+}
+
+.tip-options-grid button:focus-visible {
+  outline: 3px solid var(--color-green-900);
+  outline-offset: 3px;
+}
+
+.tip-options-grid input {
+  background-color: var(--color-grey-50);
+  color: var(--color-green-900);
+  border: none;
+  border-radius: 0.3125rem;
+  padding: var(--spacing-100) var(--spacing-200);
+  font-size: var(--text-preset-3);
+  line-height: 36px;
+  width: 100%;
+  text-align: center;
+  outline: none;
+}
+
+.tip-options-grid input::placeholder {
+  color: var(--color-grey-300);
+}
+
+.tip-options-grid input:focus {
+  outline: 2px solid var(--color-green-400);
+}
