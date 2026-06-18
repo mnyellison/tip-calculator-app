@@ -1,44 +1,127 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <title>Calculadora de Gorjeta Online | Frontend Mentor Challenge</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
 
-  Bill
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <img src="./images/logo.svg" alt="Logo Splitter" />
+    </header>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+    <main class="calculator-container">
+      <form action="" class="calculator-form">
+        <section class="input-panel">
+          <div class="inout-group">
+            <label for="bill-input">Conta</label>
+            <div class="input-wrapper">
+              <input
+                type="number"
+                name="bill"
+                id="bill-input"
+                placeholder="0"
+                step="0.01"
+                min="0"
+              />
+              <img src="./images/icon-dollar.svg" alt="" aria-hidden="true" />
+            </div>
+          </div>
 
-  Number of People
+          <div class="input-group">
+            <span class="label-title">Selecionar Gorjeta %</span>
+            <div class="tip-options-grid">
+              <button type="button" class="btn-tip" data-percentage="5">
+                5%
+              </button>
+              <button type="button" class="btn-tip" data-percentage="10">
+                10%
+              </button>
+              <button type="button" class="btn-tip" data-percentage="15">
+                15%
+              </button>
+              <button type="button" class="btn-tip" data-percentage="25">
+                25%
+              </button>
+              <button type="button" class="btn-tip" data-percentage="50">
+                50%
+              </button>
 
-  Tip Amount
-  / person
+              <input
+                type="number"
+                name="custom-tip"
+                id="custom-tip-input"
+                placeholder="Outro"
+                min="0"
+              />
+            </div>
+          </div>
 
-  Total
-  / person
+          <div class="input-group">
+            <div class="label-wrapper">
+              <label for="people-input">Número de Pessoas</label>
+              <span
+                class="error-message"
+                id="people-error"
+                aria-live="polite"
+              ></span>
+            </div>
+            <div class="input-wrapper">
+              <input
+                type="number"
+                name="people"
+                id="people-input"
+                placeholder="0"
+                min="1"
+              />
+              <img src="./images/icon-person.svg" alt="" aria-hidden="true" />
+            </div>
+          </div>
+        </section>
 
-  Reset
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+        <section class="result-panel">
+          <div class="result-display">
+            <div class="result-label">
+              <p class="result-title">Gorjeta</p>
+              <span class="result-subtitle">/ por pessoa</span>
+            </div>
+            <strong class="result-value">
+              $ <span id="tip-amount-result">0.00</span>
+            </strong>
+          </div>
+
+          <div class="result-display">
+            <div class="result-label">
+              <p class="result-title">Total</p>
+              <span class="result-subtitle">/ por pessoa</span>
+            </div>
+            <strong class="result-value">
+              $ <span id="tip-amount-result">0.00</span>
+            </strong>
+          </div>
+
+          <button type="reset" class="btn-reset" id="reset-button">
+            Limpar
+          </button>
+        </section>
+      </form>
+    </main>
+  </body>
 </html>
