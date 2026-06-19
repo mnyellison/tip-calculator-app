@@ -29,3 +29,54 @@ body {
   flex-direction: column;
   gap: var(--spacing-400);
 }
+
+.result-panel {
+  background-color: var(--color-green-900);
+  color: var(--color-white);
+  border-radius: 0.9375rem;
+  padding: var(--spacing-300);
+}
+
+.result-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-300);
+}
+
+.result-title {
+  font-size: var(--text-preset-5);
+  line-height: 24px;
+}
+
+.result-subtitle {
+  color: var(--color-grey-400);
+  font-size: var(--text-preset-6);
+  line-height: 19px;
+}
+
+.result-value {
+  color: var(--color-green-400);
+  font-size: var(--text-preset-2);
+  letter-spacing: -0.67px;
+}
+
+.btn-reset {
+  width: 100%;
+  background-color: var(--color-green-400);
+  color: var(--color-green-900);
+  padding: var(--spacing-100) var(--spacing-400);
+  font-size: var(--text-preset-4);
+  line-height: 30px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.3125rem;
+  margin-top: var(--spacing-100);
+  cursor: pointer;
+}
+
+.btn-reset:disabled {
+  background-color: var(--color-green-750);
+  color: var(--color-green-800);
+  cursor: not-allowed;
+}
