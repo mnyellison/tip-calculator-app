@@ -5,6 +5,21 @@
   display: block;
 }
 
+.label-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label-wrapper span {
+  color: var(--color-orange-400);
+  margin-bottom: var(--spacing-100);
+  opacity: 0;
+}
+
+.label-wrapper span.error-message {
+  opacity: 1;
+}
+
 .input-wrapper {
   background-color: var(--color-grey-50);
   border-radius: 0.3125rem;
@@ -12,6 +27,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.input-wrapper.error-message {
+  outline: 2px solid var(--color-orange-400);
 }
 
 .input-wrapper input {
