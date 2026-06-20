@@ -37,6 +37,11 @@
   outline-offset: 3px;
 }
 
+.tip-options-grid button.selected {
+  background-color: var(--color-green-400);
+  color: var(--color-green-900);
+}
+
 .tip-options-grid input {
   background-color: var(--color-grey-50);
   color: var(--color-green-900);
