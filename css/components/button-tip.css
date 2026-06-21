@@ -24,12 +24,8 @@
 }
 
 .tip-options-grid button:hover {
-  background-color: var(--color-green-400);
-  color: var(--color-green-900);
-}
-
-.tip-options-grid button:active {
   background-color: var(--color-green-200);
+  color: var(--color-green-900);
 }
 
 .tip-options-grid button:focus-visible {
